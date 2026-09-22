@@ -35,15 +35,15 @@ namespace MyApp
                 registros = csv.GetRecords<Persona>().ToList();
                 foreach (var registro in registros) 
                 {
-                    dgv1.Rows.Add(registro.id, registro.name, registro.email);
+                    dgvRegistros.Rows.Add(registro.Id, registro.name, registro.email);
                 }
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form editar = new Form2(dgVRegistros.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                                    dgVRegistros.Rows[e.RowIndex].Cells[2].Value.ToString());
+            Form editar = new Form2(dgvRegistros.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                                    dgvRegistros.Rows[e.RowIndex].Cells[2].Value.ToString());
             editar.Show();
         }
     }

@@ -13,7 +13,6 @@ namespace MyApp
         public Form2(string nombre, string correo)
         {
             InitializeComponent();
-            InitializeComponent();
             textNombre.Text = nombre;
             textCorreo.Text = correo;
         }
