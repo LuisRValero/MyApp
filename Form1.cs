@@ -28,14 +28,14 @@ namespace MyApp
 
         private void butCargar_Click(object sender, EventArgs e)
         {
-            if (ofd1.ShowDialog() == DialogResult.OK) 
+            if (ofd1.ShowDialog() == DialogResult.OK)
             {
                 var reader = new StreamReader(ofd1.FileName);
                 var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
                 registros = csv.GetRecords<Persona>().ToList();
-                foreach (var registro in registros) 
+                foreach (var registro in registros)
                 {
-                    dgvRegistros.Rows.Add(registro.Id, registro.name, registro.email);
+                    dgvRegistros.Rows.Add(registro.id, registro.name, registro.email);
                 }
             }
         }
@@ -45,6 +45,11 @@ namespace MyApp
             Form editar = new Form2(dgvRegistros.Rows[e.RowIndex].Cells[1].Value.ToString(),
                                     dgvRegistros.Rows[e.RowIndex].Cells[2].Value.ToString());
             editar.Show();
+        }
+
+        private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

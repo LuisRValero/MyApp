@@ -31,12 +31,12 @@
             splitContainer1 = new SplitContainer();
             butCargar = new Button();
             dgvRegistros = new DataGridView();
+            ofd1 = new OpenFileDialog();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            ofd1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -54,6 +54,7 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.Controls.Add(butCargar);
+            splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint_1;
             // 
             // splitContainer1.Panel2
             // 
@@ -87,6 +88,10 @@
             dgvRegistros.Size = new Size(917, 369);
             dgvRegistros.TabIndex = 0;
             dgvRegistros.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // ofd1
+            // 
+            ofd1.FileName = "openFileDialog1";
             // 
             // Column1
             // 
@@ -130,10 +135,6 @@
             Column5.ReadOnly = true;
             Column5.Width = 125;
             // 
-            // ofd1
-            // 
-            ofd1.FileName = "openFileDialog1";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,11 +156,11 @@
         private SplitContainer splitContainer1;
         private DataGridView dgvRegistros;
         private Button butCargar;
+        private DataGridView dgv1;
+        private OpenFileDialog ofd1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
-        private DataGridView dgv1;
-        private OpenFileDialog ofd1;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
     }
