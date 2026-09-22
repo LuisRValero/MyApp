@@ -32,6 +32,7 @@
             label2 = new Label();
             textNombre = new TextBox();
             textCorreo = new TextBox();
+            buttActualizar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -66,11 +67,22 @@
             textCorreo.Size = new Size(284, 27);
             textCorreo.TabIndex = 3;
             // 
+            // buttActualizar
+            // 
+            buttActualizar.Location = new Point(480, 127);
+            buttActualizar.Name = "buttActualizar";
+            buttActualizar.Size = new Size(94, 29);
+            buttActualizar.TabIndex = 4;
+            buttActualizar.Text = "Actualizar";
+            buttActualizar.UseVisualStyleBackColor = true;
+            buttActualizar.Click += buttActualizar_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 351);
+            Controls.Add(buttActualizar);
             Controls.Add(textCorreo);
             Controls.Add(textNombre);
             Controls.Add(label2);
@@ -88,5 +100,6 @@
         private Label label2;
         private TextBox textNombre;
         private TextBox textCorreo;
+        private Button buttActualizar;
     }
 }
