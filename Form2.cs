@@ -11,6 +11,7 @@ namespace MyApp
 
     public partial class Form2 : Form
     {
+
         public string ActualizaNombre { get; set; }
         public string ActualizaCorreo { get; set; }
 
