@@ -30,16 +30,18 @@
         {
             splitContainer1 = new SplitContainer();
             butCargar = new Button();
-            dataGridView1 = new DataGridView();
+            dgVRegistros = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             ofd1 = new OpenFileDialog();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgVRegistros).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -55,7 +57,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(dataGridView1);
+            splitContainer1.Panel2.Controls.Add(dgVRegistros);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(917, 555);
             splitContainer1.SplitterDistance = 182;
@@ -71,20 +73,20 @@
             butCargar.UseVisualStyleBackColor = true;
             butCargar.Click += butCargar_Click;
             // 
-            // dataGridView1
+            // dgVRegistros
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(917, 369);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgVRegistros.AllowUserToAddRows = false;
+            dgVRegistros.AllowUserToDeleteRows = false;
+            dgVRegistros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgVRegistros.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dgVRegistros.Dock = DockStyle.Fill;
+            dgVRegistros.Location = new Point(0, 0);
+            dgVRegistros.Name = "dgVRegistros";
+            dgVRegistros.ReadOnly = true;
+            dgVRegistros.RowHeadersWidth = 51;
+            dgVRegistros.Size = new Size(917, 369);
+            dgVRegistros.TabIndex = 0;
+            dgVRegistros.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
@@ -116,6 +118,22 @@
             // 
             ofd1.FileName = "openFileDialog1";
             // 
+            // Column4
+            // 
+            Column4.HeaderText = "Column4";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Column5";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            Column5.Width = 125;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -128,19 +146,21 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgVRegistros).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private SplitContainer splitContainer1;
-        private DataGridView dataGridView1;
+        private DataGridView dgVRegistros;
         private Button butCargar;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridView dgv1;
         private OpenFileDialog ofd1;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }
