@@ -31,12 +31,12 @@
             splitContainer1 = new SplitContainer();
             butCargar = new Button();
             dgvRegistros = new DataGridView();
-            ofd1 = new OpenFileDialog();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            ofd1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -89,10 +89,6 @@
             dgvRegistros.TabIndex = 0;
             dgvRegistros.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // ofd1
-            // 
-            ofd1.FileName = "openFileDialog1";
-            // 
             // Column1
             // 
             Column1.HeaderText = "ID";
@@ -135,6 +131,10 @@
             Column5.ReadOnly = true;
             Column5.Width = 125;
             // 
+            // ofd1
+            // 
+            ofd1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -142,7 +142,7 @@
             ClientSize = new Size(917, 555);
             Controls.Add(splitContainer1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Registros";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
