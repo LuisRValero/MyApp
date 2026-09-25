@@ -37,6 +37,7 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             ofd1 = new OpenFileDialog();
+            butGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(butGuardar);
             splitContainer1.Panel1.Controls.Add(butCargar);
             splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint_1;
             // 
@@ -135,6 +137,16 @@
             // 
             ofd1.FileName = "openFileDialog1";
             // 
+            // butGuardar
+            // 
+            butGuardar.Location = new Point(394, 65);
+            butGuardar.Name = "butGuardar";
+            butGuardar.Size = new Size(94, 29);
+            butGuardar.TabIndex = 1;
+            butGuardar.Text = "Guardar";
+            butGuardar.UseVisualStyleBackColor = true;
+            butGuardar.Click += butGuardar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -163,5 +175,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        private Button butGuardar;
     }
 }
