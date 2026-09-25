@@ -30,8 +30,8 @@ namespace MyApp
         {
             if (ofd1.ShowDialog() == DialogResult.OK)
             {
-                var reader = new StreamReader(ofd1.FileName);
-                var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+                using (var reader = new StreamReader(ofd1.FileName))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 registros = csv.GetRecords<Persona>().ToList();
                 foreach (var registro in registros)
                 {

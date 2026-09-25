@@ -88,7 +88,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Modificar";
             Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
