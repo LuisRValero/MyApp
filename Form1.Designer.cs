@@ -134,6 +134,8 @@
             // Column4
             // 
             Column4.HeaderText = "Column4";
+            Column4.Image = Properties.Resources.basuraicon;
+            Column4.ImageLayout = DataGridViewImageCellLayout.Stretch;
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
@@ -144,6 +146,8 @@
             // Column5
             // 
             Column5.HeaderText = "Column5";
+            Column5.Image = Properties.Resources.publicacion;
+            Column5.ImageLayout = DataGridViewImageCellLayout.Stretch;
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
