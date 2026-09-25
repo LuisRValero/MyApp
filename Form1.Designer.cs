@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            butGuardar = new Button();
             butCargar = new Button();
             dgvRegistros = new DataGridView();
+            ofd1 = new OpenFileDialog();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            ofd1 = new OpenFileDialog();
-            butGuardar = new Button();
+            Column4 = new DataGridViewImageColumn();
+            Column5 = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -66,6 +66,16 @@
             splitContainer1.SplitterDistance = 182;
             splitContainer1.TabIndex = 0;
             // 
+            // butGuardar
+            // 
+            butGuardar.Location = new Point(394, 65);
+            butGuardar.Name = "butGuardar";
+            butGuardar.Size = new Size(94, 29);
+            butGuardar.TabIndex = 1;
+            butGuardar.Text = "Guardar";
+            butGuardar.UseVisualStyleBackColor = true;
+            butGuardar.Click += butGuardar_Click;
+            // 
             // butCargar
             // 
             butCargar.Location = new Point(53, 65);
@@ -90,6 +100,10 @@
             dgvRegistros.Size = new Size(917, 369);
             dgvRegistros.TabIndex = 0;
             dgvRegistros.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // ofd1
+            // 
+            ofd1.FileName = "openFileDialog1";
             // 
             // Column1
             // 
@@ -123,6 +137,8 @@
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
+            Column4.Resizable = DataGridViewTriState.True;
+            Column4.SortMode = DataGridViewColumnSortMode.Automatic;
             Column4.Width = 125;
             // 
             // Column5
@@ -131,21 +147,9 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
+            Column5.Resizable = DataGridViewTriState.True;
+            Column5.SortMode = DataGridViewColumnSortMode.Automatic;
             Column5.Width = 125;
-            // 
-            // ofd1
-            // 
-            ofd1.FileName = "openFileDialog1";
-            // 
-            // butGuardar
-            // 
-            butGuardar.Location = new Point(394, 65);
-            butGuardar.Name = "butGuardar";
-            butGuardar.Size = new Size(94, 29);
-            butGuardar.TabIndex = 1;
-            butGuardar.Text = "Guardar";
-            butGuardar.UseVisualStyleBackColor = true;
-            butGuardar.Click += butGuardar_Click;
             // 
             // Form1
             // 
@@ -170,11 +174,11 @@
         private Button butCargar;
         private DataGridView dgv1;
         private OpenFileDialog ofd1;
+        private Button butGuardar;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private Button butGuardar;
+        private DataGridViewImageColumn Column4;
+        private DataGridViewImageColumn Column5;
     }
 }
