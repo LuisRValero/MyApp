@@ -32,12 +32,12 @@
             butGuardar = new Button();
             butCargar = new Button();
             dgvRegistros = new DataGridView();
-            ofd1 = new OpenFileDialog();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewImageColumn();
             Column5 = new DataGridViewImageColumn();
+            ofd1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -56,12 +56,10 @@
             // 
             splitContainer1.Panel1.Controls.Add(butGuardar);
             splitContainer1.Panel1.Controls.Add(butCargar);
-            splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint_1;
             // 
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(dgvRegistros);
-            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(917, 555);
             splitContainer1.SplitterDistance = 182;
             splitContainer1.TabIndex = 0;
@@ -100,10 +98,6 @@
             dgvRegistros.Size = new Size(917, 369);
             dgvRegistros.TabIndex = 0;
             dgvRegistros.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ofd1
-            // 
-            ofd1.FileName = "openFileDialog1";
             // 
             // Column1
             // 
@@ -155,6 +149,10 @@
             Column5.SortMode = DataGridViewColumnSortMode.Automatic;
             Column5.Width = 125;
             // 
+            // ofd1
+            // 
+            ofd1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -170,6 +168,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvRegistros).EndInit();
             ResumeLayout(false);
         }
+
+        
 
         #endregion
 

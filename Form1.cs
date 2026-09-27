@@ -11,21 +11,6 @@ namespace MyApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void butCargar_Click(object sender, EventArgs e)
         {
             if (ofd1.ShowDialog() == DialogResult.OK)
@@ -51,11 +36,6 @@ namespace MyApp
                 dgvRegistros.Rows[e.RowIndex].Cells[1].Value = nombre;
                 dgvRegistros.Rows[e.RowIndex].Cells[2].Value = correo;
             }
-        }
-
-        private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void butGuardar_Click(object sender, EventArgs e)
